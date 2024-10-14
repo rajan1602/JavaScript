@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 align-items = "center">Print the basic Details of a Employee </h1>
+</body>
+<script>
+  // Define a class called Employee
+class Employee {
+    constructor(name, age, department,salary,designation) {
+      this.name = name;
+      this.age = age;
+      this.department = department;
+      this.salary = salary;
+      this.designation = designation;
+    }
+  
+    printEmployee() {
+      document.write(`Name: ${this.name} <br>`);
+      document.write(`Age: ${this.age} <br>`);
+      document.write(`Department: ${this.department} <br>`);
+      document.write(`Salary: ${this.salary} <br>`);
+      document.write(`Designation: ${this.designation} <br>`);
+    }
+  }
+// Define a class called A that extends Employee
+    class A extends Employee {
+      constructor(name, age, department,salary,designation) {
+super(name, age, department,salary,designation);
+
+    }
+  }
+
+  // Take input from the user
+  const name = prompt("Enter employee name:");
+  const age = parseInt(prompt("Enter employee age:"));
+  const department = prompt("Enter employee department:");
+  const salary = parseInt(prompt("Enter employee salary:"));
+  const designation = prompt("Enter employee designation:");
+  
+  // Create a new Employee object
+  const employee = new Employee(name, age, department,salary,designation);
+  
+  // Print the employee details
+  employee.printEmployee();
+
+</script>
+</html>
+
+
+<!-- // Define a class called Employee
+class Employee {
+    constructor(name, age, department) {
+      this.name = name;
+      this.age = age;
+      this.department = department;
+    }
+  
+    printEmployee() {
+      console.log(`Name: ${this.name}`);
+      console.log(`Age: ${this.age}`);
+      console.log(`Department: ${this.department}`);
+    }
+  }
+  
+  // Take input from the user
+  const name = prompt("Enter employee name:");
+  const age = parseInt(prompt("Enter employee age:"));
+  const department = prompt("Enter employee department:");
+  
+  // Create a new Employee object
+  const employee = new Employee(name, age, department);
+  
+  // Print the employee details
+  employee.printEmployee(); -->
